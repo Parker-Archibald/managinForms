@@ -1,0 +1,44 @@
+nav {
+    background: black;
+    font-family: sans-serif;
+    font-size: 26px;
+    color: lightblue;
+}
+
+fieldset {
+    height: 100%;
+    width: 40%;
+    margin: 0% auto;
+    display: flex;
+}
+#regTitle, #logTitle, #forgotTitle {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    font-weight: bold;
+    font-size: 24px;
+}
+#btn {
+    margin: 10px;
+    text-align: center;
+}
+#cntList {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+#firstName, #lastName, #email, #phone, #password, #confirm {
+    width: 600px;
+}
+span {
+    font-weight: 400;
+}
+#enterEmail {
+    text-align: center;
+}
+#loglist {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 100px;
+}
