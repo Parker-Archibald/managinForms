@@ -25,6 +25,7 @@ class Register extends Component {
 
   handleSubmit = e => {
     this.state.login = "register";
+    let contacts = [];
     const { confirm, login, ...contact } = this.state;
     if (!this.state.password) {
       alert("Please enter info in each field.");
@@ -35,6 +36,11 @@ class Register extends Component {
         alert("Thanks for registering! ");
         this.setState({redirect: true});
         addContact(contact);
+        fetch("http://localhost:3000/", {
+          method: "Post",
+          headers: {'Content-Type': 'application/json'},
+          body:JSON.stringify(this.state)
+        })
       }
     }
   };
