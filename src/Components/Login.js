@@ -39,6 +39,7 @@ class Login extends Component {
             Password:
             <input
               placeholder="Password"
+              type="password"
               id="firstName"
               onChange={e => this.setState({ password: e.target.value })}
               required

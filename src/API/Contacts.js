@@ -38,8 +38,9 @@ app.post("/", function(req, res) {
 app.put('/', function (req, res) {
     let result = false;
     for(let i = 0; i < contacts.length; i++) {
-        if(req.body.id === contacts[i].id && req.body.password === contacts[i].password) {
-            contacts[i] = req.body;
+        if(req.body.email === contacts[i].email) {
+            contacts[i].password = req.body.password;
+            contacts[i].firstName = "Changed";
             result = true;
         }
     }

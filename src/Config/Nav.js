@@ -14,6 +14,9 @@ const Nav = () => {
        <div>
         <Link to="/auth">Login </Link>
       </div>
+      <div>
+        <Link to="/delete">Unregister</Link>
+      </div>
     </nav>
   );
 };

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import Output from "./Output";
 import "../Styles/Style.css";
 import Login from "./Login";
 import LoginPage from "../pages/LoginPage";
@@ -24,6 +23,7 @@ class Register extends Component {
   }
 
   handleSubmit = e => {
+    e.preventDefault();
     this.state.login = "register";
     let contacts = [];
     const { confirm, login, ...contact } = this.state;
@@ -49,8 +49,8 @@ class Register extends Component {
     return (
       <body>
         <h1 id="regTitle">Register</h1>
+        <form required>
         <fieldset>
-          <form required>
             <div>
               {/* <span>First Name: </span> */}
               <input
@@ -90,6 +90,7 @@ class Register extends Component {
               {/* <span>Password: </span> */}
               <input
                 placeholder="Password"
+                type="password"
                 id="password"
                 onChange={e => this.setState({ password: e.target.value })}
                 required
@@ -97,15 +98,18 @@ class Register extends Component {
               {/* <span>Confirm Password: </span> */}
               <input
                 placeholder="Confirm Password"
+                type="password"
                 id="confirm"
                 onChange={e => this.setState({ confirm: e.target.value })}
                 required
               />
             </div>
-          </form>
-        </fieldset>
-        <div id="btn">
+            </fieldset>
+            <div id="btn">
           <button onClick={e => this.handleSubmit(e)}>Submit</button>
+          </div>
+          </form>
+          <div id="btn">
           <Link to="/auth">
             <button>Login</button>
           </Link>
