@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/Style.css";
 import "../App.css";
+import ShowList from '../Components/showList'
 
 const Home = ({ getContacts, getLoggedIn }) => {
   const contacts = getContacts().map(contact => (

@@ -1,8 +1,9 @@
-const contacts = [];
+let contacts = [];
 let logged = [];
 
 export const getContacts = () => {
-  return contacts;
+   return contacts;
+ 
 };
 
 export const getLoggedIn = () => {
